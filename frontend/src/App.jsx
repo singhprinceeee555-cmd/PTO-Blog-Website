@@ -27,7 +27,7 @@ function HomePage() {
 
   useEffect(() => {
 
-    fetch("http://localhost:5000/api/posts")
+    fetch("https://pto-blog-backend.onrender.com/api/posts")
 
       .then((response) => {
 
@@ -102,7 +102,7 @@ function HomePage() {
 
 
       const response = await fetch(
-        "http://localhost:5000/api/subscribe",
+        "https://pto-blog-backend.onrender.com/api/subscribe",
         {
           method: "POST",
 

@@ -11,7 +11,7 @@ function BlogPost() {
 
   useEffect(() => {
 
-    fetch(`http://localhost:5000/api/posts/${id}`)
+    fetch(`https://pto-blog-backend.onrender.com/api/posts/${id}`)
 
       .then((response) => {
 
