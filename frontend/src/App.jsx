@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import BlogPost from "./BlogPost";
+const API_URL = import.meta.env.VITE_API_URL;
 
 /* ========================================================= */
 /* ===================== HOME PAGE ========================== */
@@ -27,7 +28,7 @@ function HomePage() {
 
   useEffect(() => {
 
-    fetch("https://pto-blog-backend.onrender.com/api/posts")
+    fetch(`${API_URL}/api/posts`)
 
       .then((response) => {
 
@@ -102,7 +103,7 @@ function HomePage() {
 
 
       const response = await fetch(
-        "https://pto-blog-backend.onrender.com/api/subscribe",
+        `${API_URL}/api/subscribe`,
         {
           method: "POST",
 

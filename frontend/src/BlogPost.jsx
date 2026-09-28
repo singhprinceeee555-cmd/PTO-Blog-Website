@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+const API_URL = import.meta.env.VITE_API_URL;
+import { 
+  useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 function BlogPost() {
@@ -11,7 +13,7 @@ function BlogPost() {
 
   useEffect(() => {
 
-    fetch(`https://pto-blog-backend.onrender.com/api/posts/${id}`)
+    fetch(`${API_URL}/api/posts/${id}`)
 
       .then((response) => {
 
